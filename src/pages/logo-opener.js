@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import "./logo-opener.scss"
 
 import EmptyLayout from "../layouts/empty-layout"
+import SplitTextToSpan from "../components/SplitTextToSpan"
 
 const LogoOpenerPage = () => (
   <EmptyLayout>
@@ -25,15 +26,12 @@ const LogoOpenerPage = () => (
       </div>
     </div>
     <section>
-      <h2>Twoja strona to</h2>
-      <h1 className="each-letter-fade-in-up-rotated">
-        <span>T</span><span>W</span><span>O</span><span>J</span><span>A</span><span>&nbsp;</span><span>T</span><span>W</span><span>I</span><span>E</span><span>R</span><span>D</span><span>Z</span><span>A</span>
+      <h2 className="each-letter-fade-in-up-rotated" style={{"--initial-delay": "1.4s"}}>
+        <SplitTextToSpan text="Twoja strona to" />
+      </h2>
+      <h1 className="each-letter-fade-in-up-rotated" style={{"--initial-delay": "2.8s"}}>
+        <SplitTextToSpan text="TWOJA TWIERDZA" />
       </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-        reiciendis aliquid quia non voluptatem sapiente at, dicta commodi illum
-        nostrum.
-      </p>
     </section>
   </EmptyLayout>
 )
